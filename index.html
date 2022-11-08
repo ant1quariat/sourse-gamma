@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header__block">
+        <nav class="menu">
+            <button class="burger__button" id="2" type="button">
+                ===
+            </button>
+            <div class="burger-menu" id="3">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+                <a href="#">Link 4</a>
+                <a href="#">Link 5</a>
+            </div>
+        </nav>
+    </header>
+</body>
+</html>
+
+
+<script>
+    const a = document.getElementById('2');
+    const b = document.getElementById('3');
+
+    a.addEventListener('click', () => {
+        if (b.getAttribute('data-open') !== "true") b.setAttribute('data-open', 'true')
+        else b.setAttribute('data-open', 'false')
+    })
+</script>
